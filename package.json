@@ -1,0 +1,25 @@
+{
+    "name": "gab.com",
+    "version": "0.0.1",
+    "description": "A wrapper module for the Gab.com API.",
+    "main": "index.js",
+    "homepage": "https://github.com/miscavage/gab.com#readme",
+    "author": "Mark Miscavage",
+    "license": "MIT",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/miscavage/gab.com.git"
+    },
+    "bugs": {
+        "url": "https://github.com/miscavage/gab.com/issues"
+    },
+    "keywords": [
+        "gab",
+        "gab.ai",
+        "gab.com",
+        "api"
+    ]
+}
