@@ -1,6 +1,6 @@
 {
     "name": "gab.com",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "An easy to use Node.js wrapper for the Gab.com API with no dependencies.",
     "main": "index.js",
     "homepage": "https://github.com/miscavage/gab.com#readme",
