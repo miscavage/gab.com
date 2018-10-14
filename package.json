@@ -1,7 +1,7 @@
 {
     "name": "gab.com",
-    "version": "0.0.1",
-    "description": "A wrapper module for the Gab.com API.",
+    "version": "0.0.2",
+    "description": "An easy to use Node.js wrapper for the Gab.com API with no dependencies.",
     "main": "index.js",
     "homepage": "https://github.com/miscavage/gab.com#readme",
     "author": "Mark Miscavage",
@@ -20,6 +20,9 @@
         "gab",
         "gab.ai",
         "gab.com",
-        "api"
+        "api",
+        "no-dependencies",
+        "api-wrapper",
+        "api-client"
     ]
 }
