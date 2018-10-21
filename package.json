@@ -7,7 +7,7 @@
     "author": "Mark Miscavage",
     "license": "MIT",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "mocha --no-timeouts --reporter spec \"./tests/*.js\" \"./tests/**/*.js\""
     },
     "repository": {
         "type": "git",
