@@ -158,6 +158,47 @@ describe('GabAPIClient', function () {
             shared.shouldBeAValidRequest(this.data);
         });
 
+        describe('createMediaAttachment', function () {
+            before(function (done) {
+                //Imaginary image...
+                let fileName = 'example.jpeg';
+                let fileMimeType = GabAPIClient.MIME_TYPES.JPEG;
+                let filePath = __dirname + '/' + fileName;
+
+                //Read the image file
+                fs.readFile(filePath, async (err, file) => {
+                    this.Gab.currentUser.createMediaAttachment(TEST_ACCESS_TOKEN, file, fileName, fileMimeType).then((data) => {
+                        this.data = data;
+                        done();
+                    });
+                });
+            });
+
+            shared.shouldBeAValidRequest(this.data);
+        });
+
+        describe('createPostWithAttachment', function () {
+            before(function (done) {
+                //Imaginary image...
+                let fileName = 'example.jpeg';
+                let fileMimeType = GabAPIClient.MIME_TYPES.JPEG;
+                let filePath = __dirname + '/' + fileName;
+
+                //Read the image file
+                fs.readFile(filePath, async (err, file) => {
+                    this.Gab.currentUser.createPostWithAttachment(TEST_ACCESS_TOKEN, [
+                        { file, fileName, fileMimeType }
+                    ], {
+                            body: 'API Test Post'
+                        }).then((data) => {
+                            this.data = data;
+                            done();
+                        })
+                });
+            });
+
+            shared.shouldBeAValidRequest(this.data);
+        });
     });
 
     describe('users', function() {
