@@ -4,7 +4,7 @@ An easy to use Node.js wrapper for the Gab.com API with no dependencies.
 
 ## • Installation
 
-Latest version: 0.0.3
+Latest version: 1.0.0
 
 `npm install gab.com`
 
@@ -676,11 +676,6 @@ Usage Example:
 ```javascript
 let data = await Gab.groups.getGroupModerationLogs(GAB_USER_ACCESS_TOKEN, 'e1b2efa5-abb8-4cd6-a37d-50f1dba0d6c0');
 ```
-
-## • To-do
-
-- Add prettier.
-- Add eslint.
 
 ## • Say Hi
 
