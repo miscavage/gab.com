@@ -4,7 +4,7 @@ An easy to use Node.js wrapper for the Gab.com API with no dependencies.
 
 ## • Installation
 
-Latest version: 0.0.3
+Latest version: 1.0.0
 
 `npm install gab.com`
 
@@ -290,6 +290,76 @@ Usage Example:
 ```javascript
 let data = await Gab.currentUser.createPost(GAB_USER_ACCESS_TOKEN, {
     body: 'Wassup'
+});
+```
+
+___
+#### `currentUser.createMediaAttachment()`
+Creates a media attachment with given image.
+
+Scope required: `write-post`
+
+Params:
+
+- `accessToken`: `String` - User authorization access token
+- `file`: `Buffer` - File to upload. Might be jpeg, png or gif. Animated gifs are allowed. Might not be more than 4mb.
+- `fileName`: `String` - File name
+- `fileMimeType`: `String` - File mime type. Use GabAPIClient.MIME_TYPES[*] for valid options
+
+| MIME Type | Usage |
+| --- | --- |
+`JPG` | `GabAPIClient.MIME_TYPES.JPG`
+`JPEG` | `GabAPIClient.MIME_TYPES.JPEG`
+`PNG` | `GabAPIClient.MIME_TYPES.PNG`
+`GIF` | `GabAPIClient.MIME_TYPES.GIF`
+
+Usage Example:
+```javascript
+//This is just an example... Feel free to use your own workflow
+//Import File System module
+const fs = require('fs');
+
+//Imaginary image...
+let fileName = 'example.jpeg';
+let fileMimeType = GabAPIClient.MIME_TYPES.JPEG;
+let filePath = __dirname + '/' + fileName;
+
+//Read the image file
+fs.readFile(filePath, async(err, file) => {
+    let data = await Gab.currentUser.createMediaAttachment(GAB_USER_ACCESS_TOKEN, file, fileName, fileMimeType);
+});
+```
+
+___
+#### `currentUser.createPostWithAttachment()`
+Creates a post with file(s) attachment.
+
+Scope required: `write-post`
+
+Params:
+
+- `accessToken`: `String` - User authorization access token
+- `fileOptions`: `Object[]` - [{file: Buffer, fileName: String, fileMimeType: String}, ...] - Max of 4 files. See currentUser.createMediaAttachment for more details.
+- `postOptions`: `Object` - Post options, see: https://developers.gab.com/#949155f0-821e-3228-49ea-4b15f35422a3 for more details.
+
+Usage Example:
+```javascript
+//This is just an example... Feel free to use your own workflow
+//Import File System module
+const fs = require('fs');
+
+//Imaginary image...
+let fileName = 'example.jpeg';
+let fileMimeType = GabAPIClient.MIME_TYPES.JPEG;
+let filePath = __dirname + '/' + fileName;
+
+//Read the image file
+fs.readFile(filePath, async(err, file) => {
+    let data = await Gab.currentUser.createPostWithAttachment(GAB_USER_ACCESS_TOKEN, [
+        { file, fileName, fileMimeType }
+    ], {
+        body: 'Test post'
+    });
 });
 ```
 
@@ -606,12 +676,6 @@ Usage Example:
 ```javascript
 let data = await Gab.groups.getGroupModerationLogs(GAB_USER_ACCESS_TOKEN, 'e1b2efa5-abb8-4cd6-a37d-50f1dba0d6c0');
 ```
-
-## • To-do
-
-- Add in function to create post with media under `currentUser`.
-- Add prettier.
-- Add eslint.
 
 ## • Say Hi
 
