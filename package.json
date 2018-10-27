@@ -7,7 +7,7 @@
     "author": "Mark Miscavage",
     "license": "MIT",
     "scripts": {
-        "test": "mocha --no-timeouts --reporter spec \"./tests/*.js\" \"./tests/**/*.js\""
+        "test": "mocha --no-timeouts --reporter spec \"./tests/lib/*.js\" \"./tests/lib/**/*.js\""
     },
     "repository": {
         "type": "git",
