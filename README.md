@@ -15,9 +15,9 @@ For complete API documentation, up-to-date parameters, reponses and errors, plea
 
 ## • Getting your API Keys
 
-At the moment, access to the Gab.com API requires a Gab Pro membership. For more information on that, please refer to https://gab.ai/pro.
+At the moment, access to the Gab.com API requires a Gab Pro membership. For more information on that, please refer to https://gab.com/pro.
 
-If you have Gab Pro already, in order to retrieve your Gab.com Developer API keys, login in and go to your account settings at https://gab.ai/settings/account then navigate to "Developer Apps" at  https://gab.ai/settings/clients.
+If you have Gab Pro already, in order to retrieve your Gab.com Developer API keys, login in and go to your account settings at https://gab.com/settings/account then navigate to "Developer Apps" at  https://gab.com/settings/clients.
 
 Click on "Create App" then input your "App Name", "Description", and "Redirect URL" and save it.
 
@@ -678,6 +678,8 @@ let data = await Gab.groups.getGroupModerationLogs(GAB_USER_ACCESS_TOKEN, 'e1b2e
 ```
 
 ## • Say Hi
+
+Find me on Gab: [@markmiscavage](https://gab.com/markmiscavage).
 
 Tweet at me: [@markmiscavage](https://twitter.com/markmiscavage).
 
