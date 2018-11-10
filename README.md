@@ -71,7 +71,7 @@ http.createServer(async(req, res) => {
 
 ## • Setting your Initial GabAPIClient Parameters
 You'll need to set up a few parameters before using the GabAPIClient.
-Upon instantiation, it's reccomended to set the Client ID and Secret. But you can also set them all individually or chain them like so:
+Upon instantiation, it's recommended to set the Client ID and Secret. But you can also set them all individually or chain them like so:
 
 ```javascript
 Gab.setClientId(GAB_API_CLIENT_ID)
@@ -165,7 +165,7 @@ You'll be required to set up all of the prior parameters before implementing the
     
 
 ### Getting Access Tokens
-Set up a route on your sever to connect to the Gab.com OAuth URL. Then within that route, redirect to `Gab.authorizationURL`. Upon completion, the user is redirected to the redirect URI you've set. In our case it's `/redirect`.
+Set up a route on your server to connect to the Gab.com OAuth URL. Then within that route, redirect to `Gab.authorizationURL`. Upon completion, the user is redirected to the redirect URI you've set. In our case it's `/redirect`.
 ```javascript
 [...](req, res) => {
     res.writeHead(302, {
@@ -215,7 +215,7 @@ All calls are returned in the following format:
 }
 ```
 
-The GabAPIClient splits up the currently available calls outline in the official Gab.com API documentaion into five parts.
+The GabAPIClient splits up the currently available calls outline in the official Gab.com API documentation into five parts.
 
 | Namespace | Usage | Description |
 | --- | --- | --- |
