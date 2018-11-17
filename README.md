@@ -4,7 +4,7 @@ An easy to use Node.js wrapper for the Gab.com API with no dependencies.
 
 ## • Installation
 
-Latest version: 1.0.0
+Latest version: 1.0.1
 
 `npm install gab.com`
 
