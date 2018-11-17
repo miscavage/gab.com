@@ -1,3 +1,1 @@
-module.exports = exports = {
-    GabAPIClient: require('./lib/GabAPIClient'),
-};
+module.exports = exports = require('./lib/GabAPIClient');
