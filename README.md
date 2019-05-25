@@ -66,7 +66,7 @@ http.createServer(async(req, res) => {
         res.write('Successfully connected');
         res.end();
     }
-});
+}).listen(8080);
 ```
 
 ## • Setting your Initial GabAPIClient Parameters
