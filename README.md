@@ -31,7 +31,7 @@ const GabAPIClient = require('gab.com');
 
 //2. Initiate the Gab API Client with your keys, redirect URI and appropriate scopes
 const Gab = new GabAPIClient(GAB_API_CLIENT_ID, GAB_API_SECRET)
-                  .setRedirectUri('http://127.0.0.1:3000/redirect');
+                  .setRedirectUri('http://127.0.0.1:3000/redirect')
                   .setScopes([
                       GabAPIClient.SCOPES.READ,
                   ]);
@@ -66,7 +66,7 @@ http.createServer(async(req, res) => {
         res.write('Successfully connected');
         res.end();
     }
-});
+}).listen(8080);
 ```
 
 ## • Setting your Initial GabAPIClient Parameters
